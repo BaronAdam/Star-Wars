@@ -18,3 +18,9 @@
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/Debug/netcoreapp3.1/Star-Wars.API.dll
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/Debug/netcoreapp3.1/Star-Wars.API.pdb
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/Debug/netcoreapp3.1/Star-Wars.API.genruntimeconfig.cache
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/Debug/netcoreapp3.1/Star-Wars.API.MvcApplicationPartsAssemblyInfo.cs
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/Debug/netcoreapp3.1/Star-Wars.API.csproj.CopyComplete

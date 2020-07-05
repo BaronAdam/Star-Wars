@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "6Q9IXDl2JXbOlkk0mRQZI/z5yhN3LVnW/kq0MzKnr9hnCCTSQqrL//S179CjmVIgXO+hUg5l9vy21Ez0ad775A==",
+  "dgSpecHash": "oB6NV04iRFCON0L4miRsKT73ceiYQIJSskYCMk2ASDFujRb+S5XYM1k9PkRocCguBLHhZB7/mEABYa4HbqkJxg==",
   "success": true,
   "projectFilePath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/adambaron/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/adambaron/.nuget/packages/microsoft.openapi/1.1.4/microsoft.openapi.1.1.4.nupkg.sha512",
+    "/home/adambaron/.nuget/packages/swashbuckle.aspnetcore/5.5.1/swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+    "/home/adambaron/.nuget/packages/swashbuckle.aspnetcore.swagger/5.5.1/swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "/home/adambaron/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.5.1/swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "/home/adambaron/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.5.1/swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
