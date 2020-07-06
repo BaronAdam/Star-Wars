@@ -1,0 +1,9 @@
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/bin/Debug/netcoreapp3.1/Star-Wars.Domain.deps.json
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/bin/Debug/netcoreapp3.1/Star-Wars.Domain.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/bin/Debug/netcoreapp3.1/Star-Wars.Domain.pdb
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.csprojAssemblyReference.cache
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.AssemblyInfoInputs.cache
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.AssemblyInfo.cs
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.csproj.CoreCompileInputs.cache
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/Debug/netcoreapp3.1/Star-Wars.Domain.pdb

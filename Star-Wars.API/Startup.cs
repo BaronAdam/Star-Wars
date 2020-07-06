@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Star_Wars.Infrastructure.Migrations;
 using Star_Wars.Infrastructure.Persistence;
 
 namespace Star_Wars.API
@@ -37,7 +38,8 @@ namespace Star_Wars.API
 
             services.AddDbContext<StarWarsDbContext>(options => options
                 .UseSqlServer(Configuration.GetConnectionString("DBConnection")));
-            
+
+            services.AddTransient<DbSeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +68,15 @@ namespace Star_Wars.API
             {
                 endpoints.MapControllers();
             });
+
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<StarWarsDbContext>();
+                var dbSeed = serviceScope.ServiceProvider.GetRequiredService<DbSeed>();
+                context.Database.EnsureDeleted();
+                context.Database.EnsureCreated();
+                dbSeed.Seed();
+            }
         }
     }
 }
