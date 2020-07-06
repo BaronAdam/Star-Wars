@@ -48,7 +48,7 @@ namespace Star_Wars.API
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Star Wars - Heroes WebAPI");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "swagger";
             });
             
             if (env.IsDevelopment())
