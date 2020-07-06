@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj": {
+            "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

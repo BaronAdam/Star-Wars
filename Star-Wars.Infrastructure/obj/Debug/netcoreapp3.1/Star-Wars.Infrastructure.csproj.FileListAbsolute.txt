@@ -7,3 +7,6 @@
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/obj/Debug/netcoreapp3.1/Star-Wars.Infrastructure.csproj.CoreCompileInputs.cache
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/obj/Debug/netcoreapp3.1/Star-Wars.Infrastructure.dll
 /home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/obj/Debug/netcoreapp3.1/Star-Wars.Infrastructure.pdb
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/bin/Debug/netcoreapp3.1/Star-Wars.Domain.dll
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/bin/Debug/netcoreapp3.1/Star-Wars.Domain.pdb
+/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/obj/Debug/netcoreapp3.1/Star-Wars.Infrastructure.csproj.CopyComplete

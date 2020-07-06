@@ -4,6 +4,66 @@
     "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj": {}
   },
   "projects": {
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj",
+        "projectName": "Star-Wars.Domain",
+        "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj",
+        "packagesPath": "/home/adambaron/.nuget/packages/",
+        "outputPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adambaron/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -24,7 +84,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj": {
+                "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
