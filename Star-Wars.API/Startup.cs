@@ -42,19 +42,13 @@ namespace Star_Wars.API
                 .UseSqlServer(Configuration.GetConnectionString("DBConnection")));
 
             services.AddTransient<DbSeed>();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSwagger();
-            
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Star Wars - Heroes WebAPI");
-                c.RoutePrefix = "swagger";
-            });
-            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,11 +70,27 @@ namespace Star_Wars.API
                     });
                 });
             }
-
+            
+            app.UseSwagger();
+            
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Star Wars - Heroes WebAPI");
+                c.RoutePrefix = "swagger";
+            });
+            
             // app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            if (env.IsDevelopment())
+            {
+                app.UseCors(x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
+            }
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
