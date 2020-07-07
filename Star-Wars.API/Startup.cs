@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -57,6 +60,22 @@ namespace Star_Wars.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
+
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+                        if (error != null)
+                        {
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
+                });
+            }
 
             // app.UseHttpsRedirection();
 
@@ -73,9 +92,9 @@ namespace Star_Wars.API
             {
                 var context = serviceScope.ServiceProvider.GetRequiredService<StarWarsDbContext>();
                 var dbSeed = serviceScope.ServiceProvider.GetRequiredService<DbSeed>();
-                context.Database.EnsureDeleted();
+                // context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
-                dbSeed.Seed();
+                // dbSeed.Seed();
             }
         }
     }
