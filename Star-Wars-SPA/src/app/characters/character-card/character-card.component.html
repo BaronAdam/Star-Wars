@@ -1,0 +1,14 @@
+<div class="card mt-2">
+  <h5 class="card-header">{{character.name}}</h5>
+  <div class="card-body">
+    <p class="card-text"> The character was present in the Star Wars episode(s) listed bellow.</p>
+    <ul class="list-group list-group ml-3 mr-3">
+      <li *ngFor="let episode of choosenEpisodes" class="list-group-item"> {{episode.name}} </li>
+    </ul>
+    <p class="card-text mt-3">The character has some friends, their names are listed below.</p>
+    <ul class="list-group list-group mb-4 ml-3 mr-3">
+      <li *ngFor="let friend of friends" class="list-group-item"> {{friend.name}} </li>
+    </ul>
+    <a href="#" class="btn btn-outline-success my-2 my-sm-0">Edit Details</a>
+  </div>
+</div>
