@@ -12,7 +12,15 @@ export class FriendService {
 
   constructor(private http: HttpClient) { }
 
-  getFriends(characterId): Observable<Friend[]> {
+  getFriends(characterId: number): Observable<Friend[]> {
     return this.http.get<Friend[]>(this.baseUrl + characterId);
+  }
+
+  sendNewFriend(obj: any): Observable<any> {
+    return this.http.post(this.baseUrl, obj);
+  }
+
+  deleteFriend(friendId: number): Observable<any> {
+    return this.http.delete(this.baseUrl + friendId);
   }
 }

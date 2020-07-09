@@ -12,7 +12,15 @@ export class CharacterToEpisodeService {
 
   constructor(private http: HttpClient) { }
 
-  getCharacterToEpisode(characterId): Observable<CharacterToEpisode[]> {
+  getCharacterToEpisode(characterId: number): Observable<CharacterToEpisode[]> {
     return this.http.get<CharacterToEpisode[]>(this.baseUrl + characterId);
+  }
+
+  sendNewCharacterToEpisode(obj: any): Observable<any> {
+    return this.http.post(this.baseUrl, obj);
+  }
+
+  deleteCharacterToEpisode(id: number) : Observable<any> {
+    return this.http.delete(this.baseUrl + id);
   }
 }

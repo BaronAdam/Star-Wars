@@ -19,4 +19,8 @@ baseUrl = environment.apiUrl + 'episode/';
   getEpisode(id): Observable<Episode> {
     return this.http.get<Episode>(this.baseUrl + id);
   }
+
+  sendNewEpisode(obj: any): Observable<Episode> {
+    return this.http.post<Episode>(this.baseUrl, obj);
+  }
 }

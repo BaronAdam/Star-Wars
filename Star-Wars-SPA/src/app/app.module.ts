@@ -6,20 +6,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { CharacterListComponent } from './characters/character-list/character-list.component';
 import { CharacterCardComponent } from './characters/character-card/character-card.component';
+import { CharacterEditComponent } from './characters/character-edit/character-edit.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
+import { CharacterNewComponent } from './characters/character-new/character-new.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CharacterListComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    CharacterEditComponent,
+    CharacterNewComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

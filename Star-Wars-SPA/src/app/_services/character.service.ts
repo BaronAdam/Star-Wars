@@ -16,7 +16,19 @@ export class CharacterService {
     return this.http.get<Character[]>(this.baseUrl);
   }
 
-  getCharacter(id): Observable<Character> {
+  getCharacter(id: number): Observable<Character> {
     return this.http.get<Character>(this.baseUrl + id);
+  }
+
+  sendNewCharacter(obj: any): Observable<Character> {
+    return this.http.post<Character>(this.baseUrl, obj);
+  }
+
+  updateCharacter(id: number, obj: any): Observable<any> {
+    return this.http.put(this.baseUrl + id, obj);
+  }
+
+  deleteCharacter(id: number): Observable<any> {
+    return this.http.delete(this.baseUrl + id);
   }
 }
