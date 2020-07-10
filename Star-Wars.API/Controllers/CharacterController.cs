@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Star_Wars.API.BindingModels;
+using Star_Wars.API.Helpers;
 using Star_Wars.API.ViewModels;
 using Star_Wars.Domain;
 using Star_Wars.Infrastructure.Persistence;
@@ -20,20 +21,20 @@ namespace Star_Wars.API.Controllers
         {
             _context = context;
         }
-        
-        [HttpGet]
-        public async Task<IActionResult> GetCharacterNames()
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetCharacters()
         {
             var characters = await _context.Characters.ToListAsync();
-        
+
             if (characters != null)
             {
-                var basicCharacterDataList = characters.Select(character => new CharacterViewModel 
-                    {
-                        Id = character.Id, 
-                        Name = character.Name
-                        
-                    }).ToList();
+                var basicCharacterDataList = characters.Select(character => new CharacterViewModel
+                {
+                    Id = character.Id,
+                    Name = character.Name
+
+                }).ToList();
 
                 return Ok(basicCharacterDataList);
             }
@@ -41,8 +42,35 @@ namespace Star_Wars.API.Controllers
             return NotFound();
         }
         
+        [HttpGet]
+        public async Task<IActionResult> GetCharactersPaginated([FromQuery]CharacterParams characterParams)
+        {
+            var characters = _context.Characters;
+
+            var pagedCharacters =
+                await PagedList<Character>.CreateAsync(characters, characterParams.PageNumber,
+                    characterParams.PageSize);
+            
+            if (pagedCharacters != null)
+            {
+                var basicCharacterDataList = pagedCharacters.Select(character => new CharacterViewModel 
+                {
+                    Id = character.Id, 
+                    Name = character.Name
+                        
+                }).ToList();
+                
+                Response.AddPagination(pagedCharacters.CurrentPage, pagedCharacters.PageSize,
+                    pagedCharacters.TotalCount, pagedCharacters.TotalPages);
+                
+                return Ok(basicCharacterDataList);
+            }
+
+            return NotFound();
+        }
+        
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCharacterName(int id)
+        public async Task<IActionResult> GetCharacter(int id)
         {
             var character = await _context.Characters.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -77,7 +105,7 @@ namespace Star_Wars.API.Controllers
         }
         
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditCharacterName(int id, [FromBody] EditCharacter data)
+        public async Task<IActionResult> EditCharacter(int id, [FromBody] EditCharacter data)
         {
             var character = await _context.Characters.FirstOrDefaultAsync(x => x.Id == id);
             
