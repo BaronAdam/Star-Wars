@@ -1,0 +1,274 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Tests/Tests.csproj": {}
+  },
+  "projects": {
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj",
+        "projectName": "Star-Wars.API",
+        "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj",
+        "packagesPath": "/home/adambaron/.nuget/packages/",
+        "outputPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adambaron/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj": {
+                "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj",
+        "projectName": "Star-Wars.Domain",
+        "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj",
+        "packagesPath": "/home/adambaron/.nuget/packages/",
+        "outputPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adambaron/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj",
+        "projectName": "Star-Wars.Infrastructure",
+        "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/Star-Wars.Infrastructure.csproj",
+        "packagesPath": "/home/adambaron/.nuget/packages/",
+        "outputPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adambaron/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj": {
+                "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.Domain/Star-Wars.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/adambaron/Dokumenty/GitHub/Star-Wars/Tests/Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Tests/Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Tests/Tests.csproj",
+        "packagesPath": "/home/adambaron/.nuget/packages/",
+        "outputPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adambaron/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj": {
+                "projectPath": "/home/adambaron/Dokumenty/GitHub/Star-Wars/Star-Wars.API/Star-Wars.API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.4.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
