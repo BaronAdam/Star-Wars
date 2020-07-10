@@ -1,0 +1,24 @@
+<div class="card mt-2">
+  <h5 class="card-header">{{character.name}}</h5>
+  <div class="card-body">
+    <p *ngIf="choosenEpisodes.length > 0" class="card-text">
+      The character was present in the Star Wars episode(s) listed bellow.
+    </p>
+    <ul *ngIf="choosenEpisodes.length > 0" class="list-group list-group ml-3 mr-3">
+      <li *ngFor="let episode of choosenEpisodes" class="list-group-item"> {{episode.name}} </li>
+    </ul>
+    <p *ngIf="friends.length > 0" class="card-text mt-3">
+      The character has some friends, their names are listed below.
+    </p>
+    <ul *ngIf="friends.length > 0" class="list-group list-group mb-4 ml-3 mr-3">
+      <li *ngFor="let friend of friends" class="list-group-item"> {{friend.name}} </li>
+    </ul>
+    <p *ngIf="choosenEpisodes.length == 0" class="card-text">
+      Episode details for this character are missing. Please edit the character details.
+    </p>
+    <p *ngIf="friends.length == 0" class="card-text">
+      Friend details for this character are missing. Please edit the character details.
+    </p>
+    <a href="#" class="btn btn-outline-primary my-2 my-sm-0" [routerLink]="['/edit/', character.id]">Edit Details</a>
+  </div>
+</div>

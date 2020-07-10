@@ -1,0 +1,47 @@
+<div style="background: transparent !important;" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4>Edit {{character?.name}}</h4>
+        <form #editForm="ngForm" (ngSubmit)="submit()">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label>Character name</label>
+              <input type="text" class="form-control" required value="{{character?.name}}"
+                     name="characterName" [(ngModel)]="characterModel.name">
+            </div>
+          </div>
+          <label for="characterCheck">Character' friends</label>
+          <button class="btn btn-outline-info ml-3" type="button" (click)="changeFriendsCheckboxState()">
+            Edit values
+          </button>
+          <div class="form-row mt-2" id="characterCheck">
+            <div *ngFor="let character of characters; let i = index" class="form-check ml-2 mt-2">
+              <input class="form-check-input" name="chk" type="checkbox" [id]="'character' + i" disabled value="">
+              <label class="form-check-label" [for]="'character' + i">
+                {{character?.name}}
+              </label>
+            </div>
+          </div>
+          <label for="episodesCheck" class="mt-2">Presence in episodes</label>
+          <button class="btn btn-outline-info ml-3" type="button" (click)="changeEpisodesCheckboxState()">
+            Edit values
+          </button>
+          <div class="form-row" id="episodesCheck">
+            <div *ngFor="let episode of episodes; let i = index" class="form-check ml-2 mt-2">
+              <input class="form-check-input" name="chk" type="checkbox" [id]="'episode' + i" value="" disabled>
+              <label class="form-check-label" [for]="'episode' + i">
+                {{episode?.name}}
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-outline-primary mt-2 mr-3" type="submit">Save Changes</button>
+          <button class="btn btn-outline-dark mt-2" [routerLink]="['/home']" type="button">Cancel</button>
+          <button class="btn btn-outline-danger mt-2 ml-3" (click)="delete()" type="button" [routerLink]="['/home']">
+            Delete Character
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
