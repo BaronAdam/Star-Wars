@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" style="background: transparent !important;">
   <div class="container">
     <div class="row">
       <div *ngFor="let character of characters" class="col-12">
@@ -6,4 +6,10 @@
       </div>
     </div>
   </div>
+  <div class="d-flex justify-content-center mt-4">
+    <pagination [totalItems]="pagination?.totalItems"
+                [ngModel]="pagination?.currentPage"
+                [itemsPerPage]="pagination?.itemsPerPage" (pageChanged)="pageChanged($event)"></pagination>
+  </div>
 </div>
+

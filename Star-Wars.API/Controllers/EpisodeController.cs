@@ -21,7 +21,7 @@ namespace Star_Wars.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetEpisodeNames()
+        public async Task<IActionResult> GetEpisodes()
         {
             var episodes = await _context.Episodes.ToListAsync();
 
@@ -40,7 +40,7 @@ namespace Star_Wars.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetEpisodeName(int id)
+        public async Task<IActionResult> GetEpisode(int id)
         {
             var episode = await _context.Episodes.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -75,7 +75,7 @@ namespace Star_Wars.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditEpisodeName(int id, [FromBody] EditEpisode data)
+        public async Task<IActionResult> EditEpisode(int id, [FromBody] EditEpisode data)
         {
             var episode = await _context.Episodes.FirstOrDefaultAsync(x => x.Id == id);
 

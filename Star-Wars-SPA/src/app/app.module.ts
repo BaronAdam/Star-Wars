@@ -10,7 +10,9 @@ import { CharacterEditComponent } from './characters/character-edit/character-ed
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import { CharacterNewComponent } from './characters/character-new/character-new.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {PaginationModule} from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    PaginationModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
