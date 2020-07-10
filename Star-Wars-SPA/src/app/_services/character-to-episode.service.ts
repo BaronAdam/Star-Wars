@@ -20,7 +20,7 @@ export class CharacterToEpisodeService {
     return this.http.post(this.baseUrl, obj);
   }
 
-  deleteCharacterToEpisode(id: number) : Observable<any> {
+  deleteCharacterToEpisode(id: number): Observable<any> {
     return this.http.delete(this.baseUrl + id);
   }
 }

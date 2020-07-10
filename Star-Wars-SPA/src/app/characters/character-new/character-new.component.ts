@@ -91,7 +91,7 @@ export class CharacterNewComponent implements OnInit {
 
   submitEpisode(): void {
     if (this.episodeModel.name !== undefined){
-      this.sendEpisode()
+      this.sendEpisode();
     }
   }
 

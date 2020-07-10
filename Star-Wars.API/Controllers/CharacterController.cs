@@ -72,7 +72,7 @@ namespace Star_Wars.API.Controllers
             return Created(character.Id.ToString(), new CharacterViewModel
             {
                 Id = character.Id,
-        any        Name = character.Name
+                Name = character.Name
             });
         }
         

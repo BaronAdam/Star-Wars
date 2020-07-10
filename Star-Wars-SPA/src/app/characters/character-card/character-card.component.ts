@@ -16,7 +16,7 @@ export class CharacterCardComponent implements OnInit {
   constructor(private detailsService: DetailsService) { }
 
   ngOnInit(): void {
-    this.choosenEpisodes = this.detailsService.loadEpisodes(this.character.id);
+    this.choosenEpisodes = this.detailsService.loadRelatedEpisodes(this.character.id);
     this.friends = this.detailsService.loadFriends(this.character.id);
   }
 }

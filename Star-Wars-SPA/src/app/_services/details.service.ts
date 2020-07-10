@@ -17,7 +17,7 @@ export class DetailsService {
   constructor(private episodeService: EpisodeService, private characterToEpisodeService: CharacterToEpisodeService,
               private friendService: FriendService, private characterService: CharacterService) { }
 
-  loadEpisodes(characterId): Episode[] {
+  loadRelatedEpisodes(characterId): Episode[] {
     let choosenEpisodes: Episode[] = [];
     this.characterToEpisodeService.getCharacterToEpisode(characterId)
       .subscribe((characterToEpisode: CharacterToEpisode[]) => {
